@@ -1,0 +1,25 @@
+﻿@model MyDealUrlShortner.Models.Url
+@{
+    ViewBag.Title = "Url Shortner";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <h1>Shorten Your Url</h1>
+    @using (Html.BeginForm("Submit", "UrlShortner"))
+    {
+     
+        <div class="form-group">
+                @Html.LabelFor(u => u.ActualUrl)
+                @Html.TextBoxFor(u => u.ActualUrl, new { @class = "form-control" })
+        </div>
+       
+        <div class="form-group">
+            @Html.DisplayFor(u=>u.MinifiedUrl)
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    }
+
+
+
+
