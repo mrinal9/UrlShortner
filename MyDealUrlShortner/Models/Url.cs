@@ -9,8 +9,10 @@ namespace MyDealUrlShortner.Models
     public class Url
     {
         public int Id { get; set; }
-        [Display(Name = "Enter the Url you want to minify")]
+        
+        [Required]
         public string ActualUrl { get; set; }
+        [Required]
         public string MinifiedUrl { get; set; }
     }
 }
